@@ -19,7 +19,8 @@ class Application
           resp.write  "#{i}\n" 
           end 
      elsif req.path.match(/add/)
-      resp.
+      search_term = req.params["q"]
+      
     else
       resp.write "Path Not Found"
     end

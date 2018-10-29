@@ -15,7 +15,9 @@ class Application
       search_term = req.params["q"]
       resp.write handle_search(search_term)
     elsif req.path.match(/cart/)
-      resp.write @@cart.each do |i| puts "#{i}" end 
+        @@cart.each do |i| 
+          resp.write  "#{i}" 
+          end 
      elsif req.path.match(/add/)
       resp.
     else
